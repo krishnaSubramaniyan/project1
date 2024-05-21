@@ -148,6 +148,8 @@
     height: 70px;
     margin-left: 20px;
     margin-right: 110px;
+    object-fit: contain;
+    overflow: hidden;
   }
   .nav__logo-H {
     min-width: 30px;
