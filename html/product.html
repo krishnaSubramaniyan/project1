@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="../styles/styles.css" />
+  <link rel="stylesheet" href="/assets/speaker.css">
+  
+
+    <title>Our Offers</title>
+    <style>
+
+/* for products card */
+.prouductcard {
+  
+    display: flex;
+    
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Adjust the gap between cards as needed */
+  }
+  
+  .pcontainer {
+    width: 350px; /* Size of each card */
+    height: 500px;
+    perspective: 800px;
+    margin-left: 20px;
+    margin-bottom: 20px; /* Adjust margin between rows as needed */
+  }
+  
+  @media (max-width: 768px) {
+    .pcontainer {
+      width: calc(100% - 40px); /* 1 card in a row for mobile */
+      margin-bottom: 30px; /* Adjust margin between rows as needed */
+    }
+    .pcontainer:hover > .card {
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+  }
+  
+  .card {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1500ms;
+    transform-style: preserve-3d;
+  }
+  .pcontainer .card.flipped {
+    transform: rotateY(180deg);
+  }
+  
+
+  .pcontainer:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  
+  .front,
+  .back {
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .front.card1 {
+    background-image: url("/assets/images/airchiller.png");
+    background-size:contain;
+    background-position: 25% ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .front.card2 {
+    background-image: url("/assets/images/waterchiller.png");
+background-size:contain;
+background-position: center;
+background-repeat:no-repeat;
+
+
+
+
+
+  }
+  
+  .front.card3 {
+    background-image: url("/assets/images/airpackage.webp");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
+
+    
+  }
+  
+  .front.card4{
+    background-image:url(/assets/images/waterpackages.jpeg);
+background-size:contain;
+background-repeat: no-repeat;
+background-position: 20%;
+  }
+  .front.card5{
+background-image:url(/assets/images/ductable.webp);
+background-size:contain;
+background-repeat: no-repeat;
+background-position: center;
+background-position: 25%;
+background-size: 150%;
+  }
+
+  .back {
+    font-family:sans-serif;
+    background-color: #5cdddd85;
+    transform: rotateY(180deg);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    
+  }
+  
+  
+    </style>
+  </head>
+  <body>
+   <!--HEADER-->
+   <header class="header">
+    <div></div>
+    <nav class="nav">
+      <div class="nav--left">
+        <button class="nav__burger button"></button>
+
+        <div class="nav__logo">
+          <div class="nav__logo-H">
+            <img  class="nav__H" src="../assets/header/gs.svg" alt="logo" />
+          </div>
+          <a class="nav__company" alt="logo">GURU SERVICES</a>        </div>
+      </div>
+
+      <div class="nav__list text__nav-items">
+        <li class="nav__item">
+          <a class="nav__link" href="/index.html">HOME</a>
+        </li>
+        
+        <li class="nav__item">
+          <a class="nav__link" href="./about.html">ABOUT US</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="./contact.html">CONTACT US</a>
+        </li>
+      </div>
+
+      <div class="nav__funcionalities">
+        <a href=""
+          ><img
+            class="nav__funcionalities-icon"
+            src="../assets/header/profile-icon.svg"
+            alt="profile-logo"
+        /></a>
+        <a href=""
+          ><img
+            class="nav__funcionalities-icon"
+            src="../assets/header/search-icon.svg"
+            alt="search-logo"
+        /></a>
+      </div>
+    </nav>
+  </header>
+
+    <!--SECCION TITLE-->
+    <section class="page-title">
+      <div class="page-title__container">
+        <h5 class="text__pretitle text--light page-title__pretitle">
+          25+ YEARS OF TRUST
+        </h5>
+
+        <h1 class="text__title text--light page-title__title">Our Products</h1>
+        <div class="page-title__index-container">
+          <div class="page-title__index">
+            <p class="text__page-card text--lightblack text__page-card--home">Home</p>
+            <p class="text__page-card text--lightblack">|</p>
+            <p class="text__page-card text--gold">Offers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- audio control section -->
+<input type="checkbox" id="checkboxInput">
+
+<label for="checkboxInput" class="toggleSwitch" id="toggleButton">
+  <div class="speaker" id="playIcon">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.0" viewBox="0 0 75 75">
+          <path d="M39.389,13.769 L22.235,28.606 L6,28.606 L6,47.699 L21.989,47.699 L39.389,62.75 L39.389,13.769z" style="stroke:#fff;stroke-width:5;stroke-linejoin:round;fill:#fff;"></path>
+          <path d="M48,27.6a19.5,19.5 0 0 1 0,21.4M55.1,20.5a30,30 0 0 1 0,35.6M61.6,14a38.8,38.8 0 0 1 0,48.6" style="fill:none;stroke:#fff;stroke-width:5;stroke-linecap:round"></path>
+      </svg>
+  </div>
+  <div class="mute-speaker" id="pauseIcon">
+      <svg version="1.0" viewBox="0 0 75 75" stroke="#fff" stroke-width="5">
+          <path d="m39,14-17,15H6V48H22l17,15z" fill="#fff" stroke-linejoin="round"></path>
+          <path d="m49,26 20,24m0-24-20,24" fill="#fff" stroke-linecap="round"></path>
+      </svg>
+  </div>
+</label>
+<audio id="myAudio" src="/assets/music.mp3" loop></audio>
+
+
+
+
+<!-- product card -->
+
+<div class="prouductcard">
+  <div class="pcontainer">
+    <div class="card">
+      <div class="front card1"></div>
+      <div class="back">
+        <h2>VOLTAS-AIR-COOLED
+        CHILLERS.</h2>
+        <p>Higher capacity scroll chillers use tandem compressors with suction gas distribution restrictor which allows balanced operation of compressor. The chillers are charged & tested in the factory prior to despatch ,ensuring operating reliability. The chillers use ultra quiet, high efficiency scroll compressors..</p>
+        <!-- <button id="downloadBtn">View Details</button> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="pcontainer">
+    <div class="card">
+      <div class="front card2"></div>
+      <div class="back">
+        <h2>VOLTAS-WATER-COOLED-CHILLERS</h2>
+        <p>A water chiller is a device used to lower the temperature of water. Most chillers use refrigerant in a closed loop system to facilitate heat exchange from water where the refrigerant is then pumped to a location where the waste heat is transferred to the atmosphere.</p>
+        <!-- <button id="downloadBtn">View Details</button> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="pcontainer">
+    <div class="card">
+      <div class="front card3"></div>
+      <div class="back">
+        <h2>AIR-COOLED-PACKAGE-UNIT</h2>
+<p>Package units have heating, compressor, heat rejection and compressors all in one unit, and are typically mounted on the roof and connected to the occupied spaces via a duct through which the heated or cooled air is provided</p>
+        <!-- <button id="downloadBtn">View Details</button> -->
+      </div>
+    </div>
+  </div>
+
+
+<div class="pcontainer">
+  <div class="card">
+    <div class="front card4"></div>
+    <div class="back">
+      <h2>WATER-COOLED-PACKAGE-UNIT</h2>
+<p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p>      <!-- <button id="downloadBtn">View Details</button> -->
+    </div>
+  </div>
+</div>
+
+
+<div class="pcontainer">
+<div class="card">
+  <div class="front card5"></div>
+  <div class="back">
+    <h2>VOLTAS-VRF-UNITS</h2>
+<P>VOLTAS Variable Refrigerant Flow (VRF) is fast becoming the climate-control technology of choice for most applications. Voltas offers VRF in its most dependable, efficient and durable forms. The new VRF systems now feature VRT technology.</P>    <!-- <button id="downloadBtn">View Details</button> -->
+  </div>
+</div>
+</div>
+
+
+
+          
+          
+
+      </div>
+    </section> 
+
+
+
+
+
+      <!--FOOTER-->
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__brand">
+            <img class="footer__logo" src="../assets/footer/logo21.svg" alt="golden-logo" />
+            <p class="footer__brand-paragraph text__footer-paragraph text__footer-paragraph--big text--gray">
+             Guru service  best chilling partners.we are experts in the field of the chiller for about 25 years.so we do what is best for you.
+             Feel free to explore our services and product. what stopping you ask quote.
+            </p>
+  
+            <div class="footer__social">
+              <div class="footer__social-icon">
+                <img
+                  src="../assets/footer/facebook-icon.svg"
+                  alt="facebook-icon"
+                />
+              </div>
+              <div class="footer__social-icon">
+                <img src="../assets/footer/twitter-icon.svg" alt="twitter-icon" />
+              </div>
+              <div class="footer__social-icon">
+                <img src="../assets/footer/be-icon.svg" alt="be-icon" />
+              </div>
+              <div class="footer__social-icon">
+                <img
+                  src="../assets/footer/linkedin-icon.svg"
+                  alt="linkedin-icon"
+                />
+              </div>
+              <div class="footer__social-icon">
+                <img src="../assets/footer/youtube-icon.svg" alt="youtube-icon" />
+              </div>
+            </div>
+          </div>
+  
+          <div class="footer__services">
+            <h6 class="text__subtitle--smaller footer__services-title">Services.</h6>
+            <div class="footer__list-container">
+            <ul class="footer__list text__footer-paragraph text__footer-paragraph--bigger text--gray">
+              <li class="footer__list-item">+  Chiller services</li>
+              <li class="footer__list-item">+  Installation</li>
+              <li class="footer__list-item">+  Annual Maintenance</li>
+              <li class="footer__list-item">+  Chemical Cleaning</li>
+              <li class="footer__list-item">+  Coil replacement</li>
+              <li class="footer__list-item">+  Troubleshooting issues</li>
+            </ul>
+  
+            <ul class="footer__list text__footer-paragraph text__footer-paragraph--bigger text--gray">
+              <li class="footer__list-item">+  Electrical power saving</li>
+              <li class="footer__list-item">+  Compressor installation</li>
+              <li class="footer__list-item">+  Compressor motor & motor rewinding</li>
+              <li class="footer__list-item">+  Tour Consultancy</li>
+            </ul>
+          </div>
+          </div>
+  
+          <div class="footer__contact">
+            <h4 class="footer__contact-title text__subtitle--smaller text--lightblack">Contact us.</h4>
+            <div class="footer__contact-info">
+  
+            
+            <div class="footer__contact-item">
+              <img src="../assets/footer/telf.svg" alt="phone-icon">
+              <div class="footer__contact-text">
+                <h6 class="text__subtitle--super-small">Phone Number</h6>
+                <p class="text__footer-paragraph text__footer-paragraph--small text--gray">+91 9884493880</p>
+              </div>
+            </div>
+            <div class="footer__contact-item">
+              <img src="../assets/footer/mail.svg" alt="mail-icon">
+              <div class="footer__contact-text">
+                <h6 class="text__subtitle--super-small text--lightblack">Mail</h6>
+                <p class="text__footer-paragraph text__footer-paragraph--small text--gray">044-26378956</p>
+              </div>
+            </div>
+            <div class="footer__contact-item">
+              <img src="../assets/footer/address.svg" alt="">
+              <div class="footer__contact-text">
+                <h6 class="text__subtitle--super-small text--lightblack">Office Address</h6>
+                <p class="text__footer-paragraph text__footer-paragraph--small text--gray">No 11, crashed Main Road, E.S.I Anna Nagar, Avadi, Chennai-600 109.</p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+  
+        <div class="footer__legal">
+          <p class="text__label text--lightblack">All Rights Reserved@2024</p>
+          <div class="footer-policies">
+            <p>
+              <a href="" class="text__label text--lightblack footer-policies-link">Terms of use  </a><span class="text__label text--lightblack"> | </span>
+              <a href="" class="text__label text--lightblack footer-policies-link"
+                >Privacy Enviroment Policy</a
+              >
+            </p>
+          </div>
+        </div>
+      </footer>
+      <script src="../scripts/burger-menu.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script src="../scripts/swiper/offersSlider.js"></script>
+      <script src="../scripts/buttons.js"></script>
+       <script src="../scripts/audio.js"></script>
+
+
+
+
+       <audio src="/assets/music.mp3"></audio>
+  </body>
+</html>
