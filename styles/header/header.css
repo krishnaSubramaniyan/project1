@@ -174,4 +174,11 @@
   img.nav__funcionalities-icon {
     width: 35px;
   }
+
+
 }/*# sourceMappingURL=header.css.map */
+@media (max-width: 600px) {
+  .nav__H {
+    width: 100px; /* Reduce the width for mobile view */
+  }
+}
