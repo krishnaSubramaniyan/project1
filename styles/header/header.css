@@ -150,8 +150,8 @@
     margin-right: 110px;
   }
   .nav__logo-H {
-    min-width: 65px;
-    height: 65px;
+    min-width: 30px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,8 +177,3 @@
 
 
 }/*# sourceMappingURL=header.css.map */
-@media (max-width: 600px) {
-  .nav__H {
-    width: 100px; /* Reduce the width for mobile view */
-  }
-}
