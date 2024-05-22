@@ -152,8 +152,9 @@
     overflow: hidden;
   }
   .nav__logo-H {
-    min-width: 30px;
-    height: 20px;
+   height:50px;
+   width:50px;
+    object-fit: contain;
     display: flex;
     justify-content: center;
     align-items: center;
