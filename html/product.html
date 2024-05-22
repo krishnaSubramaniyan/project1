@@ -17,26 +17,52 @@
     <title>Our Products</title>
     <style>
 
-.productcard {
+/* for products card */
+ .prouductcard {
+  
     display: flex;
+    
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px; /* Adjust the gap between cards as needed */
-}
-
-.pcontainer {
+    gap: 100px; /*Adjust the gap between cards as needed */
+  } 
+  .mobile-only {
+    display:none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+} 
+  .pcontainer {
     width: 350px; /* Size of each card */
     height: 500px;
     perspective: 800px;
     margin-left: 20px;
     margin-bottom: 20px; /* Adjust margin between rows as needed */
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .pcontainer {
-        width: calc(100% - 40px); /* 1 card in a row for mobile */
-        margin-bottom: 30px; /* Adjust margin between rows as needed */
+      width: calc(100% - 40px); /* 1 card in a row for mobile */
+      margin-bottom: 30px; /* Adjust margin between rows as needed */
+    }
+    .pcontainer:hover > .card {
+      cursor: pointer;
+      transform: rotateY(180deg);
+    }
+
+    .newlogo{
+      height: auto;
+      width:auto;
+      object-fit: contain;
+      overflow: hidden;
+    }
+    .mobile-only {
+        display: block;
     }
 
     .mobile-only {
@@ -60,79 +86,85 @@
         background-color: #0056b3;
         transform: translateX(-50%) scale(1.05);
     }
-}
 
-@media (min-width: 769px) {
-    .mobile-only {
-        display: none;
+    .mobile-only:active {
+        background-color: #004494;
+        transform: translateX(-50%) scale(0.95);
     }
-}
-
-.card {
+  }
+  
+  .card {
     height: 100%;
     width: 100%;
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
-}
-
-.pcontainer .card.flipped {
+  }
+  .pcontainer .card.flipped {
     transform: rotateY(180deg);
-}
+  }
+  
 
-.pcontainer:hover > .card {
+  .pcontainer:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg);
-}
-
-.front,
-.back {
+  }
+  
+  .front,
+  .back {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
     box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
     position: absolute;
     backface-visibility: hidden;
-}
-
-.front.card1 {
+  }
+  .front.card1 {
     background-image: url("../../project1/assets/images/airchiller.png");
-    background-size: contain;
-    background-position: 25%;
+    background-size:contain;
+    background-position: 25% ;
+    background-size: 100%;
     background-repeat: no-repeat;
-}
-
-.front.card2 {
+  }
+  
+  .front.card2 {
     background-image: url("../../project1/assets/images/waterchiller.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+background-size:contain;
+background-position: center;
+background-repeat:no-repeat;
 
-.front.card3 {
+
+
+
+
+  }
+  
+  .front.card3 {
     background-image: url("../../project1/assets/images/airpackage.webp");
-    background-size: contain;
+    background-size:contain;
     background-repeat: no-repeat;
     background-position: 20%;
-}
 
-.front.card4 {
-    background-image: url("../../project1/assets/images/waterpackages.jpeg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 20%;
-}
+    
+  }
+  
+  .front.card4{
+    background-image:url("../../project1/assets/images/waterpackages.jpeg");
+background-size:contain;
+background-repeat: no-repeat;
+background-position: 20%;
+  }
+  .front.card5{
+background-image:url("../../project1/assets/images/ductable.webp");
+background-size:contain;
+background-repeat: no-repeat;
+background-position: center;
+background-position: 25%;
+background-size: 150%;
+  }
 
-.front.card5 {
-    background-image: url("../../project1/assets/images/ductable.webp");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 25%;
-    background-size: 150%;
-}
-
-.back {
-    font-family: sans-serif;
+  .back {
+    font-family:sans-serif;
     background-color: #5cdddd85;
     transform: rotateY(180deg);
     display: flex;
@@ -141,15 +173,14 @@
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    position: relative;
-}
-
-.newlogo {
+    
+  }
+  .newlogo{
     height: 100px;
-    width: 100px;
+    width:100px;
     object-fit: contain;
     overflow: hidden;
-}
+  }
 
 
 
