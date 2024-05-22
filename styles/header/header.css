@@ -110,7 +110,12 @@
   color: #1f6c7f;
   text-decoration: none;
 }
-
+.newlogo{
+  height: 100px;
+  width:100px;
+  object-fit: contain;
+  overflow: hidden;
+}
 @media (min-width: 1000px) {
   .nav {
     min-width: 1000px;
@@ -125,6 +130,12 @@
   }
   .header {
     height: 80px;
+  }
+  .newlogo{
+    height: auto;
+    width:auto;
+    object-fit: contain;
+    overflow: hidden;
   }
   .nav__burger {
     display: none;
