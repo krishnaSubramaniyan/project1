@@ -274,7 +274,7 @@ background-size: 150%;
         CHILLERS.</h2>
         <p>Higher capacity scroll chillers use tandem compressors with suction gas distribution restrictor which allows balanced operation of compressor. The chillers are charged & tested in the factory prior to despatch ,ensuring operating reliability. The chillers use ultra quiet, high efficiency scroll compressors..</p>
         <!-- <button id="downloadBtn">View Details</button> -->
-        <button id="flipButton">TAP</button>
+       
       </div>
     </div>
   </div>
@@ -286,7 +286,6 @@ background-size: 150%;
         <h2>VOLTAS-WATER-COOLED-CHILLERS</h2>
         <p>A water chiller is a device used to lower the temperature of water. Most chillers use refrigerant in a closed loop system to facilitate heat exchange from water where the refrigerant is then pumped to a location where the waste heat is transferred to the atmosphere.</p>
         <!-- <button id="downloadBtn">View Details</button> -->
-        <Button id="flipButton">TAP</Button>
       </div>
     </div>
   </div>
@@ -304,7 +303,7 @@ background-size: 150%;
     </div>
   </div>
  
-<Button id="flipButton">TAP</Button>
+
 
 <div class="pcontainer">
   <div class="card">
@@ -313,7 +312,6 @@ background-size: 150%;
       <h2>WATER-COOLED-PACKAGE-UNIT</h2>
 <p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p> 
      <!-- <button id="downloadBtn">View Details</button> -->
-     <button id="flipButton">TAP</button>
     </div>
   </div>
 </div>
@@ -331,7 +329,7 @@ background-size: 150%;
 </div>
 </div>
 
-<Button id="flipButton">TAP</Button>
+
 
           
           
@@ -450,16 +448,14 @@ background-size: 150%;
 
 <script>
 
-document.getElementById('card').addEventListener('click', function(event) {
-    // Only flip the card if the click event is not from the flipButton
-    if (event.target.id !== 'flipButton') {
-        this.classList.toggle('flipped');
-    }
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const card = document.getElementById('card');
 
-document.getElementById('flipButton').addEventListener('click', function(event) {
-    event.stopPropagation(); // Prevent the click from propagating to the card
-    document.getElementById('card').classList.remove('flipped');
+    card.addEventListener('click', function(event) {
+        if (window.innerWidth <= 400) { // Only on devices with a width of 400px or less
+            card.classList.toggle('flipped');
+        }
+    });
 });
 
 
