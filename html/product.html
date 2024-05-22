@@ -25,11 +25,7 @@
     justify-content: center;
     align-items: center;
     gap: 100px; /*Adjust the gap between cards as needed */
-  } 
-   #flipButton{
-    display:none;
 
-} 
   .pcontainer {
     width: 350px; /* Size of each card */
     height: 500px;
@@ -157,7 +153,7 @@ background-size: 150%;
   }
 
   .back {
-    font-family:sans-serif;
+    font-family: sans-serif;
     background-color: #5cdddd85;
     transform: rotateY(180deg);
     display: flex;
@@ -165,9 +161,10 @@ background-size: 150%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    
-  }
+    gap: 1rem;
+    padding: 20px;
+    box-sizing: border-box;
+}
   .newlogo{
     height: 100px;
     width:100px;
@@ -176,7 +173,43 @@ background-size: 150%;
   }
 
 
+  #flipButton {
+    display: none; /* Hidden by default */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    bottom: -50px; /* Adjust this to place the button appropriately */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
 
+#flipButton:hover {
+    background-color: #0056b3;
+    transform: translateX(-50%) scale(1.05);
+}
+
+#flipButton:active {
+    background-color: #004494;
+    transform: translateX(-50%) scale(0.95);
+}
+
+@media (max-width: 400px) {
+    #flipButton {
+        display: block; /* Show button on mobile screens */
+    }
+}
+
+@media (min-width: 401px) {
+    .card {
+        pointer-events: none; /* Disable card flipping on larger screens */
+    }
   
     </style>
   </head>
@@ -273,7 +306,8 @@ background-size: 150%;
         CHILLERS.</h2>
         <p>Higher capacity scroll chillers use tandem compressors with suction gas distribution restrictor which allows balanced operation of compressor. The chillers are charged & tested in the factory prior to despatch ,ensuring operating reliability. The chillers use ultra quiet, high efficiency scroll compressors..</p>
         <!-- <button id="downloadBtn">View Details</button> -->
-       
+        <Button id="flipButton">TAP</Button>
+      </div>
       </div>
     </div>
   </div>
@@ -285,11 +319,13 @@ background-size: 150%;
         <h2>VOLTAS-WATER-COOLED-CHILLERS</h2>
         <p>A water chiller is a device used to lower the temperature of water. Most chillers use refrigerant in a closed loop system to facilitate heat exchange from water where the refrigerant is then pumped to a location where the waste heat is transferred to the atmosphere.</p>
         <!-- <button id="downloadBtn">View Details</button> -->
+        <Button id="flipButton">TAP</Button>
+      </div>
       </div>
     </div>
   </div>
 
-  <button id="flipButton">Flip</button>
+ 
   <div class="pcontainer">
     <div class="card">
       <div class="front card3"></div>
@@ -297,7 +333,8 @@ background-size: 150%;
         <h2>AIR-COOLED-PACKAGE-UNIT</h2>
 <p>Package units have heating, compressor, heat rejection and compressors all in one unit, and are typically mounted on the roof and connected to the occupied spaces via a duct through which the heated or cooled air is provided</p>
         <!-- <button id="downloadBtn">View Details</button> -->
-        
+        <Button id="flipButton">TAP</Button>
+      </div>
       </div>
     </div>
   </div>
@@ -311,6 +348,8 @@ background-size: 150%;
       <h2>WATER-COOLED-PACKAGE-UNIT</h2>
 <p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p> 
      <!-- <button id="downloadBtn">View Details</button> -->
+     <Button id="flipButton">TAP</Button>
+      </div>
     </div>
   </div>
 </div>
@@ -323,7 +362,8 @@ background-size: 150%;
   <div class="back">
     <h2>VOLTAS-VRF-UNITS</h2>
 <P>VOLTAS Variable Refrigerant Flow (VRF) is fast becoming the climate-control technology of choice for most applications. Voltas offers VRF in its most dependable, efficient and durable forms. The new VRF systems now feature VRT technology.</P>    <!-- <button id="downloadBtn">View Details</button> -->
-
+<Button id="flipButton">TAP</Button>
+      </div>
 </div>
 </div>
 </div>
