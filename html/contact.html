@@ -17,7 +17,16 @@
     object-fit: contain;
     overflow: hidden;
   }
-  
+  @media (max-width: 768px) {
+    .nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav p {
+        font-size: 16px; /* Adjust for better readability on smaller screens */
+    }
+}
 
     </style>
 </head>
