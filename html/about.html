@@ -24,13 +24,15 @@
     object-fit: contain;
     overflow: hidden;
     }
-    header {
-            background-color: #007bff;
+    .gheader {
+            background-color: #44c7d8;
             color: #fff;
             padding: 10px 20px;
             margin: 5 auto;
-            max-width:1000px;
+            max-width:800px;
             box-shadow: black 3px 3px;
+            border-radius: 15px;
+            text-align: center;
         }
         .video-container {
             position: relative;
@@ -47,7 +49,22 @@
             width: 100%;
             height: 100%;
         }
-
+/* About section */
+.about-section {
+            background-color: #fff;
+            padding: 50px 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-section h2 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .about-section p {
+            text-align: justify;
+        }
     </style>
   </head>
   <body>
@@ -114,12 +131,12 @@
     </label>
 <audio  id ="myAudio" src="../assets/music.mp3"  loop></audio>
 <!-- ends -->
-<header>
-  <div class="container">
+
+  <div class="gheader">
       <h1>Guru Services</h1>
       <p>Your cooling solutions partner</p>
   </div>
-</header>
+
 
     <!--INTRODUCTION-->
     <section class="introduction">
@@ -141,86 +158,12 @@
         </div>
     </section>
 
-    <!--CORE FEATURES-->
-    <section class="core-features core-features--dark">
-      <div class="core-features__container">
-        <h5
-          class="text__pretitle text--light text--center core-features__pretitle"
-        >
-          FACILITIES
-        </h5>
-        <h1 class="text__title text--center core-features__title text--light">
-          Core Features
-        </h1>
-
-        <div class="swiper swiper--core-features">
-          <div class="swiper-wrapper core-features__slider">
-            <div class="swiper-slide core-features__slide">
-              <img
-                class="core-features_number-icon"
-                src="./assets/home/core-features/01.svg"
-                alt=""
-              />
-              <div class="core-features__slide-info">
-                <img
-                  class="core-features__icon"
-                  src="./assets/home/core-features/star.svg"
-                  alt=""
-                />
-                <h4 class="text__subtitle core-features__slide-title">
-                 Customer Satisfaction
-                </h4>
-                <p class="text__paragraph text--gray">
-                  "Customer satisfaction is our top priority. 
-                  Your happiness is our success."
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide core-features__slide">
-              <img
-                class="core-features_number-icon"
-                src="./assets/home/core-features/02.svg"
-                alt=""
-              />
-              <div class="core-features__slide-info">
-                <img
-                  class="core-features__icon"
-                  src="./assets/home/core-features/quiethours.svg"
-                  alt=""
-                />
-                <h4 class="text__subtitle core-features__slide-title">
-                  Quick Process
-                </h4>
-                <p class="text__paragraph text--gray">
-                  "We value our client time and investment, so we are rapid finishers".
-                </p>
-              </div>
-            </div>
-            <div class="swiper-slide core-features__slide">
-              <img
-                class="core-features_number-icon"
-                src="./assets/home/core-features/03.svg"
-                alt=""
-              />
-              <div class="core-features__slide-info">
-                <img
-                  class="core-features__icon"
-                  src="./assets/home/core-features/bestlocation.svg"
-                  alt=""
-                />
-                <h4 class="text__subtitle core-features__slide-title">
-                  ALL OVER INDIA
-                </h4>
-                <p class="text__paragraph text--gray">
-                  "We are ready serve our client at any time, so location doesnt stop us from serving our clients"
-                </p>
-              </div>
-            </div>
-            
-          
-            
-          </section>
-      
+    <div class="container">
+      <div class="about-section">
+          <h2>About Us</h2>
+          <p>Guru Services is a leading provider of cooling solutions for various industries. With years of experience in the field, we offer a wide range of chiller systems, cooling towers, and related products to meet the diverse needs of our clients.</p>
+          <p>Our team of skilled engineers and technicians is committed to delivering high-quality, reliable, and energy-efficient cooling solutions tailored to the specific requirements of each customer. Whether you need a standard chiller unit or a customized cooling system, we have the expertise and resources to deliver.</p>
+      </div>
 
       
      
