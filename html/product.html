@@ -11,7 +11,7 @@
     href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
   />
   <link rel="stylesheet" href="../styles/styles.css" />
-  <link rel="stylesheet" href="/assets/speaker.css">
+  <link rel="stylesheet" href="../../project1/assets/speaker.css">
   
 
     <title>Our Offers</title>
@@ -145,23 +145,27 @@ background-size: 150%;
           <div class="nav__logo-H">
             <img  class="nav__H" src="../assets/header/gs.svg" alt="logo" />
           </div>
-          <a class="nav__company" alt="logo">GURU SERVICES</a>        </div>
+          <!-- <a class="nav__company" alt="logo">GURU SERVICES</a></div> -->
+          <p>GURU SERVICES</p>
       </div>
 
       <div class="nav__list text__nav-items">
         <li class="nav__item">
-          <a class="nav__link" href="/index.html">HOME</a>
-        </li>
-        
-        <li class="nav__item">
-          <a class="nav__link" href="./about.html">ABOUT US</a>
+          <a class="nav__link" href="../../project1/index.html">HOME</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="./contact.html">CONTACT US</a>
+          <a href="../../project1/html/services.html">SERVICES</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../../project1/html/about.html">ABOUT US</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="../../project1/html/contact.html">CONTACT US</a>
         </li>
       </div>
 
-      <div class="nav__funcionalities">
+
+      <!-- <div class="nav__funcionalities">
         <a href=""
           ><img
             class="nav__funcionalities-icon"
@@ -174,7 +178,7 @@ background-size: 150%;
             src="../assets/header/search-icon.svg"
             alt="search-logo"
         /></a>
-      </div>
+      </div> -->
     </nav>
   </header>
 
@@ -390,11 +394,22 @@ background-size: 150%;
       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
       <script src="../scripts/swiper/offersSlider.js"></script>
       <script src="../scripts/buttons.js"></script>
-       <script src="../scripts/audio.js"></script>
+       <script src="../../project1/scripts/audio.js"></script>
 
 
+<script>
+  document.getElementById('mobbtn').addEventListener('click', function() {
+  const card = document.querySelector('.pcontainer .card');
+  card.classList.toggle('flipped');
+});
 
+document.querySelector('.pcontainer').addEventListener('click', function() {
+  const card = this.querySelector('.card');
+  card.classList.toggle('flipped');
+});
 
-       <audio src="/assets/music.mp3"></audio>
+</script>
+
+       <audio src="../../project1/scripts/audio.js"></audio>
   </body>
 </html>
