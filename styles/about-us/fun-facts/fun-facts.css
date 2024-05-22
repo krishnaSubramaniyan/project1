@@ -66,6 +66,8 @@
   .fun-facts__slider {
     min-width: 900px;
     max-width: unset;
+    object-fit: contain;
+    overflow: hidden;
     max-height: unset;
     display: grid;
     grid-template-columns: 1fr 1fr;
