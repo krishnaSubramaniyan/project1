@@ -17,118 +17,167 @@
     <title>Our Products</title>
     <style>
 
-.prouductcard {
-  
-  display: flex;
-  
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 100px; /* Adjust the gap between cards as needed */
+/* for products card */
+.productcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Adjust the gap between cards as needed */
 }
 
 .pcontainer {
-  width: 350px; /* Size of each card */
-  height: 500px;
-  perspective: 800px;
-  margin-left: 20px;
-  margin-bottom: 20px; /* Adjust margin between rows as needed */
+    width: 350px; /* Size of each card */
+    height: 500px;
+    perspective: 800px;
+    margin-left: 20px;
+    margin-bottom: 20px; /* Adjust margin between rows as needed */
 }
 
 @media (max-width: 768px) {
-  .pcontainer {
-    width: calc(100% - 40px); /* 1 card in a row for mobile */
-    margin-bottom: 30px; /* Adjust margin between rows as needed */
-  }
-  .pcontainer:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
+    .pcontainer {
+        width: calc(100% - 40px); /* 1 card in a row for mobile */
+        margin-bottom: 30px; /* Adjust margin between rows as needed */
+    }
+
+    .mobile-only {
+        display: block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .mobile-only:hover {
+        background-color: #0056b3;
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    .mobile-only:active {
+        background-color: #004494;
+        transform: translateX(-50%) scale(0.95);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
 }
 
 .card {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
 }
+
 .pcontainer .card.flipped {
-  transform: rotateY(180deg);
-}
-
-
-.pcontainer:hover > .card {
-  cursor: pointer;
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .front,
 .back {
-  height: 100%;
-  width: 100%;
-  border-radius: 2rem;
-  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-  position: absolute;
-  backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
 }
+
 .front.card1 {
-  background-image: url("../../project1/assets/images/airchiller.png");
-  background-size:contain;
-  background-position: 25% ;
-  background-size: 100%;
-  background-repeat: no-repeat;
+    background-image: url("../../project1/assets/images/airchiller.png");
+    background-size: contain;
+    background-position: 25%;
+    background-repeat: no-repeat;
 }
 
 .front.card2 {
-  background-image: url("../../project1/assets/images/waterchiller.png");
-background-size:contain;
-background-position: center;
-background-repeat:no-repeat;
-
-
-
-
-
+    background-image: url("../../project1/assets/images/waterchiller.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .front.card3 {
-  background-image: url("../../project1/assets/images/airpackage.webp");
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-position: 20%;
-
-  
+    background-image: url("../../project1/assets/images/airpackage.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
 }
 
-.front.card4{
-  background-image:url("../../project1/assets/images/waterpackages.jpeg");
-background-size:contain;
-background-repeat: no-repeat;
-background-position: 20%;
+.front.card4 {
+    background-image: url("../../project1/assets/images/waterpackages.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
 }
-.front.card5{
-background-image:url("../../project1/assets/images/ductable.webp");
-background-size:contain;
-background-repeat: no-repeat;
-background-position: center;
-background-position: 25%;
-background-size: 150%;
+
+.front.card5 {
+    background-image: url("../../project1/assets/images/ductable.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 25%;
+    background-size: 150%;
 }
 
 .back {
-  font-family:sans-serif;
-  background-color: #5cdddd85;
-  transform: rotateY(180deg);
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  
+    font-family: sans-serif;
+    background-color: #5cdddd85;
+    transform: rotateY(180deg);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
 }
 
+.newlogo {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    overflow: hidden;
+}
+
+.mobile-only {
+    display: none; /* Hidden by default */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.mobile-only:hover {
+    background-color: #0056b3;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.mobile-only:active {
+    background-color: #004494;
+    transform: translateX(-50%) scale(0.95);
+}
 
 
 
@@ -218,6 +267,8 @@ background-size: 150%;
 
 <!-- product card -->
 
+<!-- product card -->
+
 <div class="prouductcard">
   <div class="pcontainer">
     <div class="card">
@@ -227,7 +278,6 @@ background-size: 150%;
         CHILLERS.</h2>
         <p>Higher capacity scroll chillers use tandem compressors with suction gas distribution restrictor which allows balanced operation of compressor. The chillers are charged & tested in the factory prior to despatch ,ensuring operating reliability. The chillers use ultra quiet, high efficiency scroll compressors..</p>
         <!-- <button id="downloadBtn">View Details</button> -->
-      </div>
       </div>
     </div>
   </div>
@@ -240,12 +290,9 @@ background-size: 150%;
         <p>A water chiller is a device used to lower the temperature of water. Most chillers use refrigerant in a closed loop system to facilitate heat exchange from water where the refrigerant is then pumped to a location where the waste heat is transferred to the atmosphere.</p>
         <!-- <button id="downloadBtn">View Details</button> -->
       </div>
-      </div>
     </div>
   </div>
-</div>
 
- 
   <div class="pcontainer">
     <div class="card">
       <div class="front card3"></div>
@@ -254,10 +301,8 @@ background-size: 150%;
 <p>Package units have heating, compressor, heat rejection and compressors all in one unit, and are typically mounted on the roof and connected to the occupied spaces via a duct through which the heated or cooled air is provided</p>
         <!-- <button id="downloadBtn">View Details</button> -->
       </div>
-      </div>
     </div>
   </div>
- 
 
 
 <div class="pcontainer">
@@ -265,28 +310,29 @@ background-size: 150%;
     <div class="front card4"></div>
     <div class="back">
       <h2>WATER-COOLED-PACKAGE-UNIT</h2>
-<p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p> 
-     <!-- <button id="downloadBtn">View Details</button> -->
-      </div>
+<p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p>      <!-- <button id="downloadBtn">View Details</button> -->
     </div>
   </div>
 </div>
 
 
-      
 <div class="pcontainer">
 <div class="card">
   <div class="front card5"></div>
   <div class="back">
     <h2>VOLTAS-VRF-UNITS</h2>
 <P>VOLTAS Variable Refrigerant Flow (VRF) is fast becoming the climate-control technology of choice for most applications. Voltas offers VRF in its most dependable, efficient and durable forms. The new VRF systems now feature VRT technology.</P>    <!-- <button id="downloadBtn">View Details</button> -->
-      </div>
+  </div>
 </div>
 </div>
-</div>
+
+
+
+          
+          
+
       </div>
     </section> 
-
 
 
 
