@@ -52,6 +52,9 @@
       object-fit: contain;
       overflow: hidden;
     }
+    .mobile-only {
+        display: block;
+    }
   }
   
   .card {
@@ -142,6 +145,16 @@ background-size: 150%;
     object-fit: contain;
     overflow: hidden;
   }
+  .mobile-only {
+    display: none;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
 
   
@@ -241,6 +254,7 @@ background-size: 150%;
         CHILLERS.</h2>
         <p>Higher capacity scroll chillers use tandem compressors with suction gas distribution restrictor which allows balanced operation of compressor. The chillers are charged & tested in the factory prior to despatch ,ensuring operating reliability. The chillers use ultra quiet, high efficiency scroll compressors..</p>
         <!-- <button id="downloadBtn">View Details</button> -->
+        <button id="flipButton">Flip</button>
       </div>
     </div>
   </div>
@@ -252,6 +266,7 @@ background-size: 150%;
         <h2>VOLTAS-WATER-COOLED-CHILLERS</h2>
         <p>A water chiller is a device used to lower the temperature of water. Most chillers use refrigerant in a closed loop system to facilitate heat exchange from water where the refrigerant is then pumped to a location where the waste heat is transferred to the atmosphere.</p>
         <!-- <button id="downloadBtn">View Details</button> -->
+        <button id="flipButton">Flip</button>
       </div>
     </div>
   </div>
@@ -263,10 +278,12 @@ background-size: 150%;
         <h2>AIR-COOLED-PACKAGE-UNIT</h2>
 <p>Package units have heating, compressor, heat rejection and compressors all in one unit, and are typically mounted on the roof and connected to the occupied spaces via a duct through which the heated or cooled air is provided</p>
         <!-- <button id="downloadBtn">View Details</button> -->
+        <button id="flipButton">Flip</button>
       </div>
     </div>
+    
   </div>
-
+  <button id="flipButton">Flip</button>
 
 <div class="pcontainer">
   <div class="card">
@@ -277,7 +294,7 @@ background-size: 150%;
     </div>
   </div>
 </div>
-
+<button id="flipButton">Flip</button>
 
 <div class="pcontainer">
 <div class="card">
@@ -288,7 +305,7 @@ background-size: 150%;
   </div>
 </div>
 </div>
-
+<button id="flipButton">Flip</button>
 
 
           
@@ -415,6 +432,15 @@ background-size: 150%;
 document.querySelector('.pcontainer').addEventListener('click', function() {
   const card = this.querySelector('.card');
   card.classList.toggle('flipped');
+});
+
+document.getElementById('card').addEventListener('click', function() {
+    this.classList.toggle('flipped');
+});
+
+document.getElementById('flipBackButton').addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent the click from triggering the card flip
+    document.getElementById('card').classList.remove('flipped');
 });
 
 </script>
