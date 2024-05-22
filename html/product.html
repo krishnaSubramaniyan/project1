@@ -21,14 +21,13 @@
  .prouductcard {
   
     display: flex;
-    
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 100px; /*Adjust the gap between cards as needed */
   } 
   .mobile-only {
-    display:none;
+    display:hidden;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -65,7 +64,7 @@
         display: block;
     }
 
-    .mobile-only {
+     #flipButton{
         display: block;
         padding: 10px 20px;
         background-color: #007bff;
@@ -82,12 +81,12 @@
         transition: background-color 0.3s, transform 0.3s;
     }
 
-    .mobile-only:hover {
+    #flipButton {
         background-color: #0056b3;
         transform: translateX(-50%) scale(1.05);
     }
 
-    .mobile-only:active {
+    #flipButton {
         background-color: #004494;
         transform: translateX(-50%) scale(0.95);
     }
