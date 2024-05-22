@@ -70,6 +70,30 @@
         .about-section p {
             text-align: center;
         }
+        .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile friendly adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
     </style>
   </head>
   <body>
@@ -173,31 +197,8 @@
           <p>Our team of skilled engineers and technicians is committed to delivering high-quality, reliable, and energy-efficient cooling solutions tailored to the specific requirements of each customer. Whether you need a standard chiller unit or a customized cooling system, we have the expertise and resources to deliver.</p>
       </div> -->
 <h1 style="text-align: center; color: #007bff; filter: drop-shadow(2px 2px 2px #d0e74eb4);">OUR CERTIFCATIONS AND AWARDS</h1>
-<section class="fun-facts">
-  <div class="fun-facts__container">
-  <div class="swiper swiper__fun-facts__slider">
-    <div class="swiper-wrapper fun-facts__slider">
-        <div class="swiper-slide fun-facts__slide">
-          <img src="../assets/images/airchiller.png" alt="fun facts img" class="fun-facts__slider--img">
-        </div>
-        </div>
-        <div class="swiper-slide fun-facts__slide">
-          <img src="../assets/images/airpackage.webp" alt="fun facts img" class="fun-facts__slider--img">
-        </div>
-        </div>
-        <div class="swiper-slide fun-facts__slide">
-          <img src="../assets/images/airpackage.webp" alt="fun facts img" class="fun-facts__slider--img">
-        </div>
-        </div>
-        <div class="swiper-slide fun-facts__slide">
-           <img src="../assets/images/airpackage.webp" alt="fun facts img" class="fun-facts__slider--img">
-        </div>
-      </div>
-    </div>
-    <div class="swiper-pagination swiper-pagination--fun-facts swiper"></div>
-    </div>
-  </div>
-</section>
+
+    
        <!--FOOTER-->
        <footer class="footer">
         <div class="footer__container">
@@ -207,7 +208,13 @@
              Guru service  best chilling partners.we are experts in the field of the chiller for about 25 years.so we do what is best for you.
              Feel free to explore our services and product. what stopping you ask quote.
             </p>
-  
+            <div class="gallery">
+              <img src="../assets/work/cert.jpeg" alt="Certification 1">
+              <img src="../assets/logo.png" alt="Certification 2">
+              <img src="../assets/Tata_logo.svg.png" alt="Certification 3">
+              <img src="../assets/images/FIRE_FLAMES Gif.gif" alt="Certification 4">
+          </div>
+          <br>
             <div class="footer__social">
               <div class="footer__social-icon">
                 <img
