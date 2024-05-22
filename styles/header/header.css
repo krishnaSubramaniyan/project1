@@ -139,6 +139,10 @@
     object-fit: contain;
     overflow: hidden;
   }
+  .nav p{
+    font-size: 16px;
+    margin:0px;
+  }
   .nav__burger {
     display: none;
   }
