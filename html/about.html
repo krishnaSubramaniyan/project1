@@ -28,8 +28,25 @@
             background-color: #007bff;
             color: #fff;
             padding: 10px 20px;
+            margin: 5 auto;
+            max-width:1000px;
+            box-shadow: black 3px 3px;
         }
-
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            padding-top: 25px;
+            height: 0;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
     </style>
   </head>
@@ -106,18 +123,18 @@
 
     <!--INTRODUCTION-->
     <section class="introduction">
-        <div class="introduction__container">
-            <video class="introduction__video"  autoplay muted loop>
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/Nc8ErHAGlC4?si=Avlrq099TmkccWMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-              Your browser does not support the video tag.
-            </video>
+
+           <!-- Video Section -->
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_HERE" frameborder="0" allowfullscreen></iframe>
+</div>
             <h4 class="introduction__subtitle text__subtitle--big"> We Guru Services Our Company has been present for over 25 years. We make the best for all our customers.</h4>
             
             <div class="introduction__card">
                 <div class="introduction__card-img"></div>
                 <div class="introduction__card-text">
-                  <h5 class="introduction__card-pretitle text__paragraph text--gray">RESTAURANT</h5>
-                  <h3 class="introduction__card-title text__card-title text--lightblack">Get Restaurant Facilities &amp Many Other More</h3>
+                  <h5 class="introduction__card-pretitle text__paragraph text--gray">OUR MISSION</h5>
+                  <h3 class="introduction__card-title text__card-title text--lightblack">provide best services to our clients</h3>
                   <p class="introduction__card-paragraph text__card-paragraph text--gray">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
                 </div>
             </div>
