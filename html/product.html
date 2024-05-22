@@ -18,147 +18,167 @@
     <style>
 
 /* for products card */
- /* for products card */
- .prouductcard {
-  
-  display: flex;
-  
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 100px; /*Adjust the gap between cards as needed */
-} 
+.productcard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; /* Adjust the gap between cards as needed */
+}
 
 .pcontainer {
-  width: 350px; /* Size of each card */
-  height: 500px;
-  perspective: 800px;
-  margin-left: 20px;
-  margin-bottom: 20px; /* Adjust margin between rows as needed */
+    width: 350px; /* Size of each card */
+    height: 500px;
+    perspective: 800px;
+    margin-left: 20px;
+    margin-bottom: 20px; /* Adjust margin between rows as needed */
 }
 
 @media (max-width: 768px) {
-  .pcontainer {
-    width: calc(100% - 40px); /* 1 card in a row for mobile */
-    margin-bottom: 30px; /* Adjust margin between rows as needed */
-  }
-  .pcontainer:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
+    .pcontainer {
+        width: calc(100% - 40px); /* 1 card in a row for mobile */
+        margin-bottom: 30px; /* Adjust margin between rows as needed */
+    }
 
-  .newlogo{
-    height: auto;
-    width:auto;
-    object-fit: contain;
-    overflow: hidden;
-  }
-  .mobile-only {
-      display: block;
-  }
-  #mobileButton{
+    .mobile-only {
+        display: block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
+    }
 
-  }
+    .mobile-only:hover {
+        background-color: #0056b3;
+        transform: translateX(-50%) scale(1.05);
+    }
+
+    .mobile-only:active {
+        background-color: #004494;
+        transform: translateX(-50%) scale(0.95);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
 }
 
 .card {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  transition: transform 1500ms;
-  transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
 }
+
 .pcontainer .card.flipped {
-  transform: rotateY(180deg);
-}
-
-
-.pcontainer:hover > .card {
-  cursor: pointer;
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .front,
 .back {
-  height: 100%;
-  width: 100%;
-  border-radius: 2rem;
-  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-  position: absolute;
-  backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    border-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+    position: absolute;
+    backface-visibility: hidden;
 }
+
 .front.card1 {
-  background-image: url("../../project1/assets/images/airchiller.png");
-  background-size:contain;
-  background-position: 25% ;
-  background-size: 100%;
-  background-repeat: no-repeat;
+    background-image: url("../../project1/assets/images/airchiller.png");
+    background-size: contain;
+    background-position: 25%;
+    background-repeat: no-repeat;
 }
 
 .front.card2 {
-  background-image: url("../../project1/assets/images/waterchiller.png");
-background-size:contain;
-background-position: center;
-background-repeat:no-repeat;
-
-
-
-
-
+    background-image: url("../../project1/assets/images/waterchiller.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .front.card3 {
-  background-image: url("../../project1/assets/images/airpackage.webp");
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-position: 20%;
-
-  
+    background-image: url("../../project1/assets/images/airpackage.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
 }
 
-.front.card4{
-  background-image:url("../../project1/assets/images/waterpackages.jpeg");
-background-size:contain;
-background-repeat: no-repeat;
-background-position: 20%;
+.front.card4 {
+    background-image: url("../../project1/assets/images/waterpackages.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
 }
-.front.card5{
-background-image:url("../../project1/assets/images/ductable.webp");
-background-size:contain;
-background-repeat: no-repeat;
-background-position: center;
-background-position: 25%;
-background-size: 150%;
+
+.front.card5 {
+    background-image: url("../../project1/assets/images/ductable.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 25%;
+    background-size: 150%;
 }
 
 .back {
-  font-family:sans-serif;
-  background-color: #5cdddd85;
-  transform: rotateY(180deg);
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 5rem;
-  
+    font-family: sans-serif;
+    background-color: #5cdddd85;
+    transform: rotateY(180deg);
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
 }
-.newlogo{
-  height: 100px;
-  width:100px;
-  object-fit: contain;
-  overflow: hidden;
+
+.newlogo {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    overflow: hidden;
 }
+
 .mobile-only {
-  display: none;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-} 
+    display: none; /* Hidden by default */
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.mobile-only:hover {
+    background-color: #0056b3;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.mobile-only:active {
+    background-color: #004494;
+    transform: translateX(-50%) scale(0.95);
+}
+
 
 
     </style>
@@ -259,7 +279,7 @@ background-size: 150%;
       </div>
       </div>
     </div>
-  </div>
+  
 
   <div class="pcontainer">
     <div class="card">
@@ -314,12 +334,6 @@ background-size: 150%;
 </div>
 </div>
 </div>
-
-
-
-          
-          
-
       </div>
     </section> 
 
