@@ -45,6 +45,13 @@
       cursor: pointer;
       transform: rotateY(180deg);
     }
+
+    .newlogo{
+      height: auto;
+      width:auto;
+      object-fit: contain;
+      overflow: hidden;
+    }
   }
   
   .card {
@@ -129,7 +136,14 @@ background-size: 150%;
     gap: 5rem;
     
   }
-  
+  .newlogo{
+    height: 100px;
+    width:100px;
+    object-fit: contain;
+    overflow: hidden;
+  }
+
+
   
     </style>
   </head>
@@ -138,14 +152,7 @@ background-size: 150%;
    <header class="header">
     <div></div>
     <nav class="nav">
-      <div class="nav--left">
-        <button class="nav__burger button"></button>
-
-        <div class="nav__logo">
-          <div class="nav__logo-H">
-            <img  class="nav__H" src="../assets/header/gs.svg" alt="logo" />
-          </div>
-          <!-- <a class="nav__company" alt="logo">GURU SERVICES</a></div> -->
+      <img class="newlogo" src="../../project1/assets/logo.png" alt="">
           <p>GURU SERVICES</p>
       </div>
 
