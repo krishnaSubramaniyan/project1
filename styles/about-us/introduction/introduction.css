@@ -10,10 +10,11 @@
   align-items: center;
 }
 
-.introduction__video {
+.introduction__video iframe{
   width: 100%;
   max-width: 600px;
   margin-bottom: 2.25rem;
+
 }
 
 .introduction__subtitle {
