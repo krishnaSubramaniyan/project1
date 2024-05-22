@@ -17,118 +17,122 @@
     <title>Our Products</title>
     <style>
 
-/* for products card */
-.prouductcard {
-  
+.productcard {
     display: flex;
-    
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 100px; /* Adjust the gap between cards as needed */
-  }
-  
-  .pcontainer {
+}
+
+.pcontainer {
     width: 350px; /* Size of each card */
     height: 500px;
     perspective: 800px;
     margin-left: 20px;
     margin-bottom: 20px; /* Adjust margin between rows as needed */
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .pcontainer {
-      width: calc(100% - 40px); /* 1 card in a row for mobile */
-      margin-bottom: 30px; /* Adjust margin between rows as needed */
-    }
-    .pcontainer:hover > .card {
-      cursor: pointer;
-      transform: rotateY(180deg);
+        width: calc(100% - 40px); /* 1 card in a row for mobile */
+        margin-bottom: 30px; /* Adjust margin between rows as needed */
     }
 
-    .newlogo{
-      height: auto;
-      width:auto;
-      object-fit: contain;
-      overflow: hidden;
-    }
     .mobile-only {
         display: block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s, transform 0.3s;
     }
-  }
-  
-  .card {
+
+    .mobile-only:hover {
+        background-color: #0056b3;
+        transform: translateX(-50%) scale(1.05);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+.card {
     height: 100%;
     width: 100%;
     position: relative;
     transition: transform 1500ms;
     transform-style: preserve-3d;
-  }
-  .pcontainer .card.flipped {
-    transform: rotateY(180deg);
-  }
-  
+}
 
-  .pcontainer:hover > .card {
+.pcontainer .card.flipped {
+    transform: rotateY(180deg);
+}
+
+.pcontainer:hover > .card {
     cursor: pointer;
     transform: rotateY(180deg);
-  }
-  
-  .front,
-  .back {
+}
+
+.front,
+.back {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
     box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
     position: absolute;
     backface-visibility: hidden;
-  }
-  .front.card1 {
-    background-image: url("../../project1/assets/images/airpackage.webp");
-    background-size:contain;
-    background-position: 25% ;
-    background-size: 100%;
+}
+
+.front.card1 {
+    background-image: url("../../project1/assets/images/airchiller.png");
+    background-size: contain;
+    background-position: 25%;
     background-repeat: no-repeat;
-  }
-  
-  .front.card2 {
+}
+
+.front.card2 {
     background-image: url("../../project1/assets/images/waterchiller.png");
-background-size:contain;
-background-position: center;
-background-repeat:no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
-
-
-
-
-  }
-  
-  .front.card3 {
+.front.card3 {
     background-image: url("../../project1/assets/images/airpackage.webp");
-    background-size:contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: 20%;
+}
 
-    
-  }
-  
-  .front.card4{
-    background-image:url("../../project1/assets/images/waterpackages.jpeg");
-background-size:contain;
-background-repeat: no-repeat;
-background-position: 20%;
-  }
-  .front.card5{
-background-image:url("../../project1/assets/images/ductable.webp");
-background-size:contain;
-background-repeat: no-repeat;
-background-position: center;
-background-position: 25%;
-background-size: 150%;
-  }
+.front.card4 {
+    background-image: url("../../project1/assets/images/waterpackages.jpeg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 20%;
+}
 
-  .back {
-    font-family:sans-serif;
+.front.card5 {
+    background-image: url("../../project1/assets/images/ductable.webp");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 25%;
+    background-size: 150%;
+}
+
+.back {
+    font-family: sans-serif;
     background-color: #5cdddd85;
     transform: rotateY(180deg);
     display: flex;
@@ -137,24 +141,16 @@ background-size: 150%;
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    
-  }
-  .newlogo{
+    position: relative;
+}
+
+.newlogo {
     height: 100px;
-    width:100px;
+    width: 100px;
     object-fit: contain;
     overflow: hidden;
-  }
-  .mobile-only {
-    display: none;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
 }
+
 
 
   
@@ -278,19 +274,20 @@ background-size: 150%;
         <h2>AIR-COOLED-PACKAGE-UNIT</h2>
 <p>Package units have heating, compressor, heat rejection and compressors all in one unit, and are typically mounted on the roof and connected to the occupied spaces via a duct through which the heated or cooled air is provided</p>
         <!-- <button id="downloadBtn">View Details</button> -->
-        <button id="flipButton">Flip</button>
+        <button id="flipButton">Tap</button>
       </div>
     </div>
-    
   </div>
-  <button id="flipButton">Flip</button>
+ 
 
 <div class="pcontainer">
   <div class="card">
     <div class="front card4"></div>
     <div class="back">
       <h2>WATER-COOLED-PACKAGE-UNIT</h2>
-<p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p>      <!-- <button id="downloadBtn">View Details</button> -->
+<p>A water-cooled air conditioner uses a consistent water flow over the condenser coil to transfer heat. The heated water gets dumped outside or into a drain, sink, or another wastewater outlet. To cool the condenser, water-cooled units use water, while air-cooled units use a fan.</p> 
+     <!-- <button id="downloadBtn">View Details</button> -->
+     <button id="flipButton">Tap</button>
     </div>
   </div>
 </div>
@@ -302,10 +299,11 @@ background-size: 150%;
   <div class="back">
     <h2>VOLTAS-VRF-UNITS</h2>
 <P>VOLTAS Variable Refrigerant Flow (VRF) is fast becoming the climate-control technology of choice for most applications. Voltas offers VRF in its most dependable, efficient and durable forms. The new VRF systems now feature VRT technology.</P>    <!-- <button id="downloadBtn">View Details</button> -->
-  </div>
-</div>
-</div>
 <button id="flipButton">Flip</button>
+</div>
+</div>
+</div>
+
 
 
           
