@@ -386,7 +386,7 @@ background-size: 150%;
             </ul>
   
             <ul class="footer__list text__footer-paragraph text__footer-paragraph--bigger text--gray">
-              <li class="footer__list-item">+  Electrical power saving</li>
+               <li class="footer__list-item">+  Electrical power saving</li>
               <li class="footer__list-item">+  Compressor installation</li>
               <li class="footer__list-item">+  Compressor motor & motor rewinding</li>
               <li class="footer__list-item">+  Tour Consultancy</li>
@@ -455,9 +455,12 @@ document.getElementById('flipBackButton').addEventListener('click', function(eve
     document.getElementById('card').classList.remove('flipped');
 });
 
-  document.getElementsByClassName("back").addEventListener('click', ()=>{
-    
-  })
+  const back = document.getElementsByClassName("back");
+  for(let i=0; i<5; i++){
+    back[i].addEventListener("click",()=>{
+      back[i].parentElement.classList.remove("flipped");
+    });
+  }
 
 </script>
 
