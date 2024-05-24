@@ -12,7 +12,6 @@
   />
   <link rel="stylesheet" href="./styles/styles.css" />  
   <link rel="stylesheet" href="/assets/speaker.css">
-  <script src="/scripts/year.js"></script>
     <title>Home</title> 
     <style>
       .newlogo{
@@ -463,7 +462,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./scripts/swiper/homeSlider.js"></script>
     <script src="/scripts/audio.js"></script>
-    <script src="./scripts/year.js"></script>
   
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -480,7 +478,15 @@
   });
 });
 
-
+      //year api
+      fetch('http://worldtimeapi.org/api/timezone/Asia/Kolkata')
+    .then((data) => {
+        return data.json();
+    })
+    .then((date) => {
+        let year = new Date(date.datetime);
+        document.getElementById("year").innerHTML = year.getFullYear()
+    });
 
     </script>
   </body>
