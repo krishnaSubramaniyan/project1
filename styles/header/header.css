@@ -74,8 +74,8 @@
   width: 20px;
   height: 13px;
   border: none;
-  margin:0;
   background-color: #FFFFFF;
+  margin-right:10px;
 }
 
 .nav__burger--close {
