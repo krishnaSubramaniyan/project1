@@ -39,7 +39,7 @@
   height: 40vh;
   background-color: #DADADA;
   margin-bottom: 2rem;
-  background-image: url("../../../../project1/assets/logo.png");
+  background-image: url("../../../assets/logo.png");
   background-size: cover;
 }
 
