@@ -95,3 +95,9 @@
     justify-content: space-between;
   }
 }/*# sourceMappingURL=footer.css.map */
+
+@media (min-width:400px){
+  .footer__logo{
+    width:25rem;
+  }
+}
