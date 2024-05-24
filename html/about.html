@@ -89,7 +89,7 @@
         }
         .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
     margin-top: 20px;
 }
@@ -119,7 +119,7 @@
     <header class="header">
       <div></div>
         <nav class="nav">
-          <img class="newlogo" src="../assets/logo.png" alt="">
+          <img class="newlogo" src="../../chiller/assets/logo.png" alt="">
               <p>GURU SERVICES</p>
               <button class="nav__burger button"></button>
           </div>
@@ -129,16 +129,16 @@
 
         <div class="nav__list text__nav-items">
           <li class="nav__item">
-            <a class="nav__link" href="/index.html">HOME</a>
+            <a class="nav__link" href="../../chiller/index.html">HOME</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/html/product.html">PRODUCTS</a>
+            <a class="nav__link" href="../../chiller/html/product.html">PRODUCTS</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/html/services.html">SERVICES</a>
+            <a class="nav__link" href="../../chiller/html/services.html">SERVICES</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="/html/contact.html">CONTACT</a>
+            <a class="nav__link" href="../../chiller/html/contact.html">CONTACT</a>
           </li>
         </div>
       </nav>
@@ -179,10 +179,10 @@
 <audio  id ="myAudio" src="../assets/music.mp3"  loop></audio>
 <!-- ends -->
 
-  <div class="gheader">
+  <!-- <div class="gheader">
       <h1>Guru Services</h1>
       <p>Your cooling solutions partner</p>
-  </div>
+  </div> -->
 
 
     <!--INTRODUCTION-->
@@ -191,12 +191,13 @@
       <section id="video-section">
         <h2>Our Introduction Video</h2>
         <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+            <iframe src="https://www.youtube.com/embed/Nc8ErHAGlC4?si=wbDmbbeuhbltKI2d" class="intro-video__iframe"></iframe>
         </div>
     </section>
     
 </div>
-            <h4 class="introduction__subtitle text__subtitle--big"> We Guru Services Our Company has been present for over 25 years. We make the best for all our customers.</h4>
+            <h4 style="text-align: center; " class="introduction__subtitle text__subtitle--big"> We Guru Services Our Company has been present for over 25 years. We make the best for all our customers.</h4>
             
             <div class="introduction__card">
                 <div class="introduction__card-img"></div>
@@ -208,20 +209,110 @@
             </div>
         </div>
     </section>
+ <!--SECCION HANDPICKED ROOMS-->
+ <section class="handpicked-rooms">
+  <h5
+    class="text__pretitle text--gray text--center handpicked-rooms__pretitle"
+  >
+    OUR GALLERY
+  </h5>
+  <h1 style="text-align: center; color: #007bff; filter: drop-shadow(2px 2px 2px #d0e74eb4);">OUR CERTIFCATIONS AND AWARDS</h1>
+  </h1>
+  <div class="swiper swiper--handpicked-rooms">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide swiper-slide--handpicked-rooms">
+        <div class="room-card">
+          <div class="room-card__img room-card__img--full">
+            <img class="room-card__img--img" src="../assets/Tata_logo.svg.png" alt="tata logo" style="object-fit: contain;">
+          </div>
+  
+        
+        </div>
+      </div>
 
+      <div class="swiper-slide swiper-slide--handpicked-rooms">
+        <div class="room-card">
+          <div class="room-card__img room-card__img--full">
+            <img class="room-card__img--img" src="../assets/images/abtslider1.jpeg" alt="tata logo" style="object-fit:contain;">
+          </div>
+  
+        
+        </div>
+      </div>
+      <div class="swiper-slide swiper-slide--handpicked-rooms">
+        <div class="room-card">
+          <div class="room-card__img room-card__img--full">
+            <img class="room-card__img--img" src="../assets/images/award.png" alt="tata logo" style="object-fit:contain;">
+          </div>
+  
+        
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--handpicked-rooms">
+        <div class="room-card">
+          <div class="room-card__img room-card__img--full">
+            <img class="room-card__img--img" src="../assets/images/Abtslider2.jpeg" alt="tata logo" style="object-fit:contain;">
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide swiper-slide--handpicked-rooms">
+        <div class="room-card">
+          <div class="room-card__img room-card__img--full">
+            <img class="room-card__img--img" src="../assets/voltas.png" alt="room photo">
+          </div>
+        </div>
+      </div>
+      <!-- <div class="swiper-slide swiper-slide--handpicked-rooms">
+        <div class="room-card">
+          <div class="room-card__img room-card__img--full">
+            <img class="room-card__img--img" src="./assets/home/handpicked-rooms/rooms/sasha-kaunas-67-sOi7mVIk-unsplash.jpg" alt="room photo">
+          </div>
+  
+          <div class="room-card__info ">
+            <div class="room-card__info-name">
+              <h4
+              class="text__subtitle--small text--lightblack text--center room-card__title"
+            >
+              Minimal Duplex Room
+            </h4>
+            <p
+              class="text__card-paragraph text--center text--gray rom-card__paragraph"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+  
+    <div class="room-card__buttons room-card__button--home">
+      <button class="room-card__button button button--room-card room-card__button-prev"><img src="../assets/home/menu/Vector.svg" alt="arrow-icon" /></button>
+      <button class="room-card__button button button--room-card button--golden room-card__button-next"><img src="../assets/home/menu/arrow-right.svg" alt="arrow-icon" /></button>
+    </div> 
+  </div>
+
+  
+</section>
     <!-- <div class="container">
       <div class="about-section">
           <h2>About Us</h2>
           <p>Guru Services is a leading provider of cooling solutions for various industries. With years of experience in the field, we offer a wide range of chiller systems, cooling towers, and related products to meet the diverse needs of our clients.</p>
           <p>Our team of skilled engineers and technicians is committed to delivering high-quality, reliable, and energy-efficient cooling solutions tailored to the specific requirements of each customer. Whether you need a standard chiller unit or a customized cooling system, we have the expertise and resources to deliver.</p>
       </div> -->
-<h1 style="text-align: center; color: #007bff; filter: drop-shadow(2px 2px 2px #d0e74eb4);">OUR CERTIFCATIONS AND AWARDS</h1>
+<!-- <h1 style="text-align: center; color: #007bff; filter: drop-shadow(2px 2px 2px #d0e74eb4);">OUR CERTIFCATIONS AND AWARDS</h1>
 <div class="gallery">
   <img src="../assets/work/cert.jpeg" alt="Certification 1">
   <img src="../assets/logo.png" alt="Certification 2">
   <img src="../assets/Tata_logo.svg.png" alt="Certification 3">
   <img src="../assets/images/FIRE_FLAMES Gif.gif" alt="Certification 4">
-</div>
+  <img src="../assets/images/abtslider1.jpeg" alt="">
+  <img src="../assets/images/Abtslider2.jpeg" alt="">
+</div> -->
     
        <!--FOOTER-->
        <footer class="footer">
@@ -328,7 +419,7 @@
       <script src="../scripts/burger-menu.js"></script>
      
       <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-      <script src="../scripts/swiper/aboutUsSlider.js"></script>
+      <script src="../scripts/swiper/homeSlider.js"></script>
       <script src="../scripts/buttons.js"></script>
       <script src="../scripts/about-us-card.js"></script>
       <script src="../scripts/audio.js"></script>
