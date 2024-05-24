@@ -425,7 +425,7 @@ background-size: 150%;
         </div>
   
         <div class="footer__legal">
-          <p class="text__label text--lightblack">All Rights Reserved@2024</p>
+          <p class="text__label text--lightblack">All Rights Reserved@<span id="year"></span></p>
           <div class="footer-policies">
             <p>
               <a href="" class="text__label text--lightblack footer-policies-link">Terms of use  </a><span class="text__label text--lightblack"> | </span>
@@ -441,6 +441,7 @@ background-size: 150%;
       <script src="../scripts/swiper/offersSlider.js"></script>
       <script src="../scripts/buttons.js"></script>
        <script src="../scripts/audio.js"></script>
+      <script src="../scripts/year.js"></script>
 
 
 <script>
@@ -455,12 +456,6 @@ document.getElementById('flipBackButton').addEventListener('click', function(eve
     document.getElementById('card').classList.remove('flipped');
 });
 
-  const back = document.getElementsByClassName("back");
-  for(let i=0; i<5; i++){
-    back[i].addEventListener("click",()=>{
-      back[i].parentElement.classList.remove("flipped");
-    });
-  }
 
 </script>
 
