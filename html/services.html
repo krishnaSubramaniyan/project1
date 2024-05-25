@@ -21,10 +21,15 @@
     object-fit: contain;
     overflow: hidden;
   }
-  .room-card--rooms {
+  body {
+    font-family: Arial, sans-serif;
+}
+
+.room-card--rooms {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    max-width: 100%;
 }
 
 .room-card__img--rooms {
@@ -70,9 +75,40 @@
 }
 
 .room-card {
-    max-width: 300px;
+    max-width: 100%;
     margin: auto;
+    box-sizing: border-box;
 }
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .room-card--rooms {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .room-card__img--rooms, .room-card__info--rooms {
+        width: 48%;
+        margin-top: 0;
+    }
+
+    .room-card__info--rooms {
+        text-align: left;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .room-card__img--rooms {
+        margin-bottom: 20px;
+    }
+
+    .room-card__info--rooms {
+        text-align: center;
+    }
+}
+
 
 
     </style>
