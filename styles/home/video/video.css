@@ -25,11 +25,15 @@
   margin-bottom: 2rem;
 }
 
-.intro-video__video {
+iframe {
   align-self: center;
   width: 100%;
   max-width: 600px;
   margin-bottom: 2.25rem;
+    border-radius: 10px;
+    border-color: #08dffb;
+    filter: drop-shadow( 2px 2px 2px #2c2c2cef);
+
 }
 
 @media (min-width: 1000px) {
