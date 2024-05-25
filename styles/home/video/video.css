@@ -1,6 +1,5 @@
 .intro-video {
   background: #1f6c7f;
-  padding-right: 5.3%;
 }
 
 .intro-video__container {
@@ -29,7 +28,6 @@ iframe {
   align-self: center;
   width: 100%;
   max-width: 600px;
-  margin-bottom: 2.25rem;
     border-radius: 10px;
     border-color: #08dffb;
     filter: drop-shadow( 2px 2px 2px #2c2c2cef);
@@ -40,6 +38,7 @@ iframe {
   .intro-video {
     background-color: #ae9d82;
     height: 100vh;
+    display:flex;
   }
   .intro-video__container {
     background: #1f6c7f;
@@ -49,5 +48,8 @@ iframe {
   }
   iframe {
     max-width: 800px;
+    width:530px;
+    height:290px;
+    margin:0 auto;
   }
 }/*# sourceMappingURL=video.css.map */
