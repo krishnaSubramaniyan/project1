@@ -23,10 +23,10 @@
   align-items: center;
 }
 
-.room-card:hover {
+/* .room-card:hover {
   scale: 1.1;
   cursor: pointer;
-}
+} */
 
 .room-card--rooms {
   margin: 0;
