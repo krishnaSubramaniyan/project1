@@ -47,6 +47,9 @@
             left: 0;
             width:800px;
             height: 500px;
+            border-radius: 10px;
+            border-color: #08dffb;
+            filter: drop-shadow( 2px 2px 2px #2c2c2cef);
         }
         #video-section {
     padding: 50px 20px;
@@ -115,6 +118,78 @@
       height:250px;
     }
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #1358ec;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2em;
+    color: #30cde9d2;
+    margin-bottom: 20px;
+}
+
+.safety-quality-section {
+    padding: 20px;
+}
+
+.safety-quality-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.safety-quality-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.safety-quality-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.safety-quality-text {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #666;
+    max-width: 300px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .safety-quality-container {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    .safety-quality-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .safety-quality-text {
+        max-width: 300px;
+        text-align: left;
+    }
+}
+
     </style>
   </head>
   <body>
@@ -189,7 +264,7 @@
 
 
     <!--INTRODUCTION-->
-    <h1 style="background: linear-gradient(to  right, #1795d4, #08dffb,#44c7d8,#d106ffba ); text-align: center;">OVERVIEW</h1>
+    <h1 style="background: linear-gradient(to  right, #1795d4, #08dffb,#44c7d8,#d106ffba ) ; background-clip:text; text-align: center;">OVERVIEW</h1>
     <p style="color: #44c7d8; font-size: 1.5rem; text-align: center;">We Guru Services Our Company has been present for over 25 years. We make the best for all our customers.</p>
 
 
@@ -208,9 +283,36 @@
     </section>
  <!--SECCION HANDPICKED ROOMS-->
  <section class="handpicked-rooms">
+  <hr>
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/Bg76E45LAag?si=nD-9Yzbn8GaEf2Pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<hr>
+  <section class="safety-quality-section">
+    <hr>
+    <h2 class="section-title">Our Commitment to Safety and Quality of Work</h2>
+    <div class="safety-quality-container">
+        <div class="safety-quality-item">
+            <img class="safety-quality-img" src="../assets/images/safety eqipments.jpg" alt="Safety Equipment">
+            <p class="safety-quality-text">
+                Our employees are equipped with the latest safety gear and undergo regular training to ensure their well-being. Safety is our top priority, and we adhere to all industry standards to maintain a safe working environment.
+            </p>
+        </div>
+        <div class="safety-quality-item">
+            <img class="safety-quality-img" src="../assets/images/qualitycheck.jpg" alt="Quality Inspection">
+            <p class="safety-quality-text">
+                We implement strict quality control measures at every step of the process. Our team conducts thorough inspections to ensure that each project meets the highest standards of quality and excellence.
+            </p>
+        </div>
+        <div class="safety-quality-item">
+            <img class="safety-quality-img" src="../assets/images/teamwork.jpg" alt="Team Collaboration">
+            <p class="safety-quality-text">
+                Our employees work collaboratively to achieve the best results. We foster a culture of teamwork and continuous improvement, ensuring that our services are reliable, efficient, and of superior quality.
+            </p>
+        </div>
+    </div>
+</section>
+ <hr>
   <h5
     class="text__pretitle text--gray text--center handpicked-rooms__pretitle"
   >
@@ -233,7 +335,7 @@
       <div class="swiper-slide swiper-slide--handpicked-rooms">
         <div class="room-card">
           <div class="room-card__img room-card__img--full">
-            <img class="room-card__img--img" src="../assets/images/abtslider1.jpeg" alt="tata logo" style="object-fit:contain;">
+            <img class="room-card__img--img" src="../assets/images/abtslider1.jpeg" alt="voltas authorized system solutions provider" style="object-fit:contain;">
           </div>
   
         
@@ -242,7 +344,7 @@
       <div class="swiper-slide swiper-slide--handpicked-rooms">
         <div class="room-card">
           <div class="room-card__img room-card__img--full">
-            <img class="room-card__img--img" src="../assets/images/award.png" alt="tata logo" style="object-fit:contain;">
+            <img class="room-card__img--img" src="../assets/images/award.png" alt="voltas best perfromer award" style="object-fit:contain;">
           </div>
   
         
@@ -252,7 +354,7 @@
       <div class="swiper-slide swiper-slide--handpicked-rooms">
         <div class="room-card">
           <div class="room-card__img room-card__img--full">
-            <img class="room-card__img--img" src="../assets/images/Abtslider2.jpeg" alt="tata logo" style="object-fit:contain;">
+            <img class="room-card__img--img" src="../assets/images/Abtslider2.jpeg" alt=" chiller we deal" style="object-fit:contain;">
           </div>
         </div>
       </div>
