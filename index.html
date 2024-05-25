@@ -33,6 +33,15 @@
     object-fit: contain;
     overflow: hidden;
   }
+  iframe {
+            top: 0;
+            left: 0;
+            width:800px;
+            height: 500px;
+            border-radius: 10px;
+            border-color: #08dffb;
+            filter: drop-shadow( 2px 2px 2px #2c2c2cef);
+        }
     </style> 
   </head>
   <body>
@@ -264,6 +273,7 @@
   
         <video class="intro-video__video"  autoplay muted loop>
           <source src="./assets/Miranda-video.mp4" type="video/mp4">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Bg76E45LAag?si=nD-9Yzbn8GaEf2Pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           Your browser does not support the video tag.
         </video>
   
