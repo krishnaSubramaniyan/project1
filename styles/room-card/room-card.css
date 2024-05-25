@@ -30,6 +30,7 @@
 
 .room-card--rooms {
   margin: 0;
+  margin-bottom:20px;
 }
 
 .room-card__img--full {
@@ -76,6 +77,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+ 
 }
 
 .room-card__img--img {
