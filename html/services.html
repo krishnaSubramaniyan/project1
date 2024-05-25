@@ -20,8 +20,7 @@
     width:100px;
     object-fit: contain;
     overflow: hidden;
-  }
-  body {
+    body {
     font-family: Arial, sans-serif;
 }
 
@@ -42,7 +41,6 @@
     background: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-top: -20px;
     position: relative;
     z-index: 1;
     text-align: center;
@@ -75,32 +73,33 @@
 }
 
 .room-card {
-    max-width: 100%;
-    margin: auto;
     box-sizing: border-box;
+    margin: 10px;
 }
 
 /* Responsive Design */
 @media (min-width: 768px) {
-    .room-card--rooms {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-
-    .room-card__img--rooms, .room-card__info--rooms {
-        width: 48%;
-        margin-top: 0;
-    }
-
-    .room-card__info--rooms {
-        text-align: left;
+    .room-cards-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
         padding: 20px;
+    }
+
+    .room-card {
+        flex-direction: column;
+        width: 100%;
     }
 }
 
 @media (max-width: 767px) {
-    .room-card__img--rooms {
+    .room-cards-container {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .room-card {
         margin-bottom: 20px;
     }
 
@@ -108,7 +107,6 @@
         text-align: center;
     }
 }
-
 
 
     </style>
@@ -173,153 +171,93 @@
  <!-- ends -->
 
 
-      <section class="rooms">
-        <div class="rooms__container">
-        <div class="swiper swiper__rooms">
-      <div class="swiper-wrapper swiper__rooms-wrapper">
-       <div class="swiper-slide rooms__slide--rooms">
-        <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-            <img class="room-card__img--img" src="../assets/images/servicecomp.jpg" alt="compressor installation">
-           
-          </div>
-  
-          <div class="room-card__info rom-card__info--rooms">
-            <h4
-              class="text__subtitle--small text--lightblack text--center room-card__title"
-            >
-            Compressor installation & overhauling
-            </h4>
-            <p
-              class="text__card-paragraph text--center text--gray rom-card__paragraph"
-            >
-             We provide Compressor Installation for chillers
-            </p>
-         
-           
-          </div>
-        </div>
+ <div class="room-cards-container">
+  <div class="room-card room-card--rooms">
+      <div class="room-card__img--rooms">
+          <img class="room-card__img--img" src="../assets/images/condensorcoil.jpg" alt="condensorcoil">
+      </div>
+      <div class="room-card__info room-card__info--rooms">
+          <h4 class="text__subtitle--small text--lightblack text--center room-card__title">Condensor Coil Installation</h4>
+          <p class="text__card-paragraph text--center text--gray room-card__paragraph">
+              We provide expert installation services for condensor coils, ensuring optimal performance 
+              and longevity for your cooling systems. Our team uses the latest techniques and tools to 
+              guarantee a precise and efficient installation. Trust us to enhance the efficiency of your 
+              cooling systems with our top-notch installation services.
+          </p>
+      </div>
+  </div>
+  <div class="room-card room-card--rooms">
+      <div class="room-card__img--rooms">
+          <img class="room-card__img--img" src="../assets/images/wiring control.jpg" alt="electrical control">
+      </div>
+      <div class="room-card__info room-card__info--rooms">
+          <h4 class="text__subtitle--small text--lightblack text--center room-card__title">Electrical Control Wiring & Interlocking Systems</h4>
+          <p class="text__card-paragraph text--center text--gray room-card__paragraph">
+              We offer comprehensive electrical wiring and interlocking system installation, including 
+              customization for control unit positioning to ensure efficiency and safety. Our services 
+              are designed to meet the highest standards of electrical safety and performance. Let us 
+              handle your electrical control needs with precision and care.
+          </p>
+      </div>
+  </div>
+  <div class="room-card room-card--rooms">
+      <div class="room-card__img--rooms">
+          <img class="room-card__img--img" src="../assets/images/condensor winding.jpg" alt="condensor rewinding">
+      </div>
+      <div class="room-card__info room-card__info--rooms">
+          <h4 class="text__subtitle--small text--lightblack text--center room-card__title">Condensor Motor & Compressor Motor Rewinding</h4>
+          <p class="text__card-paragraph text--center text--gray room-card__paragraph">
+              We provide professional rewinding services for condensor and compressor motors, along with 
+              installation of the refurbished components for improved efficiency. Our expert technicians 
+              ensure that every motor is rewound to perfection, enhancing its lifespan and performance. 
+              Rely on us for high-quality motor rewinding services that you can trust.
+          </p>
+      </div>
+  </div>
+  <div class="room-card room-card--rooms">
+      <div class="room-card__img--rooms">
+          <img class="room-card__img--img" src="../assets/images/chemical cleaning.jpg" alt="chemical cleaning">
+      </div>
+      <div class="room-card__info room-card__info--rooms">
+          <h4 class="text__subtitle--small text--lightblack text--center room-card__title">Chemical Cleaning</h4>
+          <p class="text__card-paragraph text--center text--gray room-card__paragraph">
+              Our chemical cleaning services are designed to maintain the efficiency and hygiene of your 
+              chillers, ensuring they operate at peak performance. We use advanced cleaning solutions 
+              that effectively remove deposits and contaminants. Keep your chillers in top condition 
+              with our professional chemical cleaning services.
+          </p>
+      </div>
+  </div>
+  <div class="room-card room-card--rooms">
+      <div class="room-card__img--rooms">
+          <img class="room-card__img--img" src="../assets/images/gas changing.jpg" alt="gas changing">
+      </div>
+      <div class="room-card__info room-card__info--rooms">
+          <h4 class="text__subtitle--small text--lightblack text--center room-card__title">Gas Changing</h4>
+          <p class="text__card-paragraph text--center text--gray room-card__paragraph">
+              We offer gas changing services for chillers and related components, ensuring your cooling 
+              systems run smoothly and efficiently. Our experts carefully handle the gas changing process 
+              to prevent leaks and ensure optimal cooling performance. Count on us for safe and effective 
+              gas changing services tailored to your needs.
+          </p>
+      </div>
+  </div>
+  <div class="room-card room-card--rooms">
+      <div class="room-card__img--rooms">
+          <img class="room-card__img--img" src="../assets/images/chiller troubleshooting.jpg" alt="troubleshooting">
+      </div>
+      <div class="room-card__info room-card__info--rooms">
+          <h4 class="text__subtitle--small text--lightblack text--center room-card__title">All Kinds of Troubleshooting</h4>
+          <p class="text__card-paragraph text--center text--gray room-card__paragraph">
+              We provide expert troubleshooting services for chillers and their components, identifying 
+              and fixing issues to minimize downtime and maximize efficiency. Our skilled technicians 
+              use state-of-the-art diagnostic tools to quickly pinpoint problems and implement effective 
+              solutions. Trust us to keep your chiller systems running smoothly with our reliable troubleshooting services.
+          </p>
+      </div>
+  </div>
+</div>
 
-        <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-              <img class="room-card__img--img" src="../assets/images/condensorcoil.jpg" alt="condensorcoil">
-          </div>
-      
-          <div class="room-card__info room-card__info--rooms">
-              <h4 class="text__subtitle--small text--lightblack text--center room-card__title">
-                  Condensor Coil Installation
-              </h4>
-              <p class="text__card-paragraph text--center text--gray room-card__paragraph">
-                  We provide expert installation services for condensor coils, ensuring optimal performance 
-                  and longevity for your cooling systems. Our team uses the latest techniques and tools to 
-                  guarantee a precise and efficient installation. Trust us to enhance the efficiency of your 
-                  cooling systems with our top-notch installation services.
-              </p>
-          </div>
-      </div>
-      
-      <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-              <img class="room-card__img--img" src="../assets/images/wiring control.jpg" alt="electrical control">
-          </div>
-      
-          <div class="room-card__info room-card__info--rooms">
-              <h4 class="text__subtitle--small text--lightblack text--center room-card__title">
-                  Electrical Control Wiring & Interlocking Systems
-              </h4>
-              <p class="text__card-paragraph text--center text--gray room-card__paragraph">
-                  We offer comprehensive electrical wiring and interlocking system installation, including 
-                  customization for control unit positioning to ensure efficiency and safety. Our services 
-                  are designed to meet the highest standards of electrical safety and performance. Let us 
-                  handle your electrical control needs with precision and care.
-              </p>
-          </div>
-      </div>
-      
-      <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-              <img class="room-card__img--img" src="../assets/images/condensor winding.jpg" alt="condensor rewinding">
-          </div>
-      
-          <div class="room-card__info room-card__info--rooms">
-              <h4 class="text__subtitle--small text--lightblack text--center room-card__title">
-                  Condensor Motor & Compressor Motor Rewinding
-              </h4>
-              <p class="text__card-paragraph text--center text--gray room-card__paragraph">
-                  We provide professional rewinding services for condensor and compressor motors, along with 
-                  installation of the refurbished components for improved efficiency. Our expert technicians 
-                  ensure that every motor is rewound to perfection, enhancing its lifespan and performance. 
-                  Rely on us for high-quality motor rewinding services that you can trust.
-              </p>
-          </div>
-      </div>
-      
-      <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-              <img class="room-card__img--img" src="../assets/images/chemical cleaning.jpg" alt="chemical cleaning">
-          </div>
-      
-          <div class="room-card__info room-card__info--rooms">
-              <h4 class="text__subtitle--small text--lightblack text--center room-card__title">
-                  Chemical Cleaning
-              </h4>
-              <p class="text__card-paragraph text--center text--gray room-card__paragraph">
-                  Our chemical cleaning services are designed to maintain the efficiency and hygiene of your 
-                  chillers, ensuring they operate at peak performance. We use advanced cleaning solutions 
-                  that effectively remove deposits and contaminants. Keep your chillers in top condition 
-                  with our professional chemical cleaning services.
-              </p>
-          </div>
-      </div>
-      
-      <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-              <img class="room-card__img--img" src="../assets/images/gas changing.jpg" alt="gas changing">
-          </div>
-      
-          <div class="room-card__info room-card__info--rooms">
-              <h4 class="text__subtitle--small text--lightblack text--center room-card__title">
-                  Gas Changing
-              </h4>
-              <p class="text__card-paragraph text--center text--gray room-card__paragraph">
-                  We offer gas changing services for chillers and related components, ensuring your cooling 
-                  systems run smoothly and efficiently. Our experts carefully handle the gas changing process 
-                  to prevent leaks and ensure optimal cooling performance. Count on us for safe and effective 
-                  gas changing services tailored to your needs.
-              </p>
-          </div>
-      </div>
-      
-      <div class="room-card room-card--rooms">
-          <div class="room-card__img--rooms">
-              <img class="room-card__img--img" src="../assets/images/chiller troubleshooting.jpg" alt="troubleshooting">
-          </div>
-      
-          <div class="room-card__info room-card__info--rooms">
-              <h4 class="text__subtitle--small text--lightblack text--center room-card__title">
-                  All Kinds of Troubleshooting
-              </h4>
-              <p class="text__card-paragraph text--center text--gray room-card__paragraph">
-                  We provide expert troubleshooting services for chillers and their components, identifying 
-                  and fixing issues to minimize downtime and maximize efficiency. Our skilled technicians 
-                  use state-of-the-art diagnostic tools to quickly pinpoint problems and implement effective 
-                  solutions. Trust us to keep your chiller systems running smoothly with our reliable troubleshooting services.
-              </p>
-          </div>
-      </div>
-      
-      </div>
-      <div class="rooms__slider-buttons">
-        <button class="room-card__button button button--room-card button--room-card-rooms room-slider__button-prev"><img src="../assets/home/menu/Vector.svg" alt="arrow-icon" /></button>
-        <div class="swiper-pagination swiper-pagination--rooms swiper"></div>
-        <button class="room-card__button button button--room-card button--room-card-rooms button--golden room-slider__button-next"><img src="../assets/home/menu/arrow-right.svg" alt="arrow-icon" /></button>
-       
-      </div> 
-      
-     
-        </div>
-      </div>
-      </section>
 
        <!--FOOTER-->
        <footer class="footer">
