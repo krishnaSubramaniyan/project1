@@ -48,7 +48,7 @@ iframe {
     padding-left: 18%;
     height: 100vh;
   }
-  .intro-video__video {
+  iframe {
     position: absolute;
     left: 50%;
     width: 45%;
