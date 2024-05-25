@@ -96,8 +96,8 @@
   }
 }/*# sourceMappingURL=footer.css.map */
 
-@media (min-width:400px){
+@media (min-width:800px){
   .footer__logo{
-    width:25rem;
+    width:30rem;
   }
 }
