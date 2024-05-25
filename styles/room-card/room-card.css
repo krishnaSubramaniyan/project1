@@ -161,6 +161,7 @@
   }
   .room-card__img {
     height: 450px;
+    width: 400px;
   }
   .room-card__info {
     width: 80%;
