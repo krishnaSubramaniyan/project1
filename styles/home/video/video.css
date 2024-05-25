@@ -6,10 +6,10 @@
 .intro-video__container {
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
-  padding-bottom: 3rem;
-  padding-left: 5.3%;
   justify-content: center;
+  width:56vw;
+  height:auto;
+  padding:20px 8rem 0;
 }
 
 .intro-video__pretitle {
@@ -39,7 +39,6 @@ iframe {
 @media (min-width: 1000px) {
   .intro-video {
     background-color: #ae9d82;
-    padding-right: 40%;
     height: 100vh;
   }
   .intro-video__container {
@@ -49,9 +48,6 @@ iframe {
     height: 100vh;
   }
   iframe {
-    position: absolute;
-    left: 50%;
-    width: 45%;
     max-width: 800px;
   }
 }/*# sourceMappingURL=video.css.map */
