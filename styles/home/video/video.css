@@ -35,6 +35,10 @@ iframe {
   margin-bottom: 2.25rem;
 }
 
+.ytp-button{
+  display:none;
+}
+
 @media (min-width: 1000px) {
   .intro-video {
     background-color: #ae9d82;
