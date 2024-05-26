@@ -38,9 +38,9 @@ iframe {
 @media (min-width: 1000px) {
   .intro-video {
     background-color: #ae9d82;
-    height: 100vh;
     display:flex;
     min-width: 300px;
+    flex-direction:row;
   }
   .intro-video__container {
     background: #1f6c7f;
@@ -56,5 +56,9 @@ iframe {
     width:530px;
     height:290px;
     margin:0 auto;
+  }
+  iframe{
+    padding:10px;
+    border-radius:10px;
   }
 }/*# sourceMappingURL=video.css.map */
