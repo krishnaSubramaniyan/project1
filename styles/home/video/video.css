@@ -1,5 +1,8 @@
 .intro-video {
   background: #1f6c7f;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 .intro-video__container {
