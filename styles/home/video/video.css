@@ -26,7 +26,8 @@
 
 iframe {
   align-self: center;
-  width: 100%;
+  width: 70%;
+  height: 50%;
   max-width: 600px;
   margin-bottom: 2.25rem;
 }
@@ -36,6 +37,7 @@ iframe {
     background-color: #ae9d82;
     height: 100vh;
     display:flex;
+    min-width: 300px;
   }
   .intro-video__container {
     background: #1f6c7f;
