@@ -8,7 +8,6 @@
 .intro-video__container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding:10px;
   height:auto;
 }
@@ -44,9 +43,8 @@ iframe {
   }
   .intro-video__container {
     background: #1f6c7f;
-    padding-right: 20%;
-    padding-left: 18%;
-    height: 100vh;
+    padding:1rem 2rem;
+    width:60vw;
   }
   .intro-video__video {
     position: absolute;
@@ -59,6 +57,19 @@ iframe {
   }
   iframe{
     padding:10px;
-    border-radius:10px;
+    border-radius:27px;
+    min-width:39vw;
+    height:400px;
+    margin:0;
   }
+  .text__paragraph {
+    font-size: 23px;
+    line-height: 27px;
+    line-height: 37px;
+}
+.text__title {
+    font-size: 67px;
+    line-height: 73px;
+}
+
 }/*# sourceMappingURL=video.css.map */
