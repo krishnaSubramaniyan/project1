@@ -36,71 +36,79 @@
     object-fit: contain;
     overflow: hidden;
   }
-      /*
-  iframe {
-            top: 0;
-            left: 0;
-            width:800px;
-            height: 500px;
-            border-radius: 10px;
-            border-color: #08dffb;
-            filter: drop-shadow( 2px 2px 2px #2c2c2cef);
-        }
-    .intro-video__container{
-      width:56vw;
-      padding:20px 8rem 0;
-      height:auto;
-    }
-    .ytp-button{
-      display:none;
-    }
-    @media (min-width: 768px) {
-  .intro-video__container {
-    width: 56vw;
-    padding: 20px 8rem 0;
-  }
-
-  .intro-video__paragraph{
-    max-width: 300px;
-
-  }
-  
-
-  iframe {
-    width:65%;
-    height: 50%;
-  }
-  .ytp-button{
-      display:none;
-    }
+  .card {
+  width: 400px;
+  aspect-ratio: 1 / 0.7;
+  border-radius: 8px;
+  position: relative;
+  cursor: pointer;
 }
-@media(max-width:768px){
-  iframe{
-      width:350px;
-      height:250px;
-      border-color: hsl(0, 0%, 100%);
-      filter: drop-shadow( 2px 2px 2px #2c2c2cef);
-
-    }
-     .intro-video__container{
-      padding: 15px;
-     }
-     .text__title.text--light.intro-video__title {
-  width: 350px;
-  font-size: 47px;
+.card .image-box {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 90%;
+  border-radius: inherit;
+  transition: 0.5s ease-in-out;
 }
 
-.intro-video__paragraph {
-  width: 350px;
-  padding: 20px;
-  
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid white;
+  border-radius: inherit;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
 }
-.intro-video_{
- padding: 10px;
-}
-  */
 
+.card:hover img {
+  filter: grayscale(1) brightness(0.4);
 }
+.card:hover::after {
+  opacity: 1;
+  inset: 20px;
+}
+
+.content {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h2,
+.content p {
+  opacity: 0;
+  transition: 0.4s 0.2s ease;
+}
+.content h2 {
+  margin-bottom: 12px;
+  scale: 0.7;
+}
+.content p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #d1d1d1;
+  transform: translateY(50%);
+}
+.card:hover .content h2 {
+  scale: 1;
+  opacity: 1;
+}
+.card:hover .content P {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
     </style> 
   </head>
@@ -176,6 +184,30 @@
         </label>
     <audio  id ="myAudio" src="/assets/music.mp3"  loop></audio>
     <!-- ends -->
+
+    <!-- prdoduct services card -->
+  
+    <div class="card">
+      <div class="image-box">
+        <img src="/assets/product.jpg" href="/html/product.html">
+      </div>
+      <div class="content">
+        <h2>Products</h2>
+        <p>Click here to know more.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image-box">
+        <img src="/assets/service.jpg" href="/html/services.html">
+      </div>
+      <div class="content">
+        <h2>Services</h2>
+        <p>Click here to Know more.</p>
+      </div>
+    </div>
+
+
 
     <!--SECCION ABOUT US-->
     <section class="about-us">
