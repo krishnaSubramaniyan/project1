@@ -39,6 +39,8 @@ iframe {
   }
   .intro-video__container {
     background: #1f6c7f;
+    padding-right: 20%;
+    padding-left: 18%;
     height: 100vh;
   }
   .intro-video__video {
