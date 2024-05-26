@@ -29,15 +29,11 @@
 iframe {
   align-self: center;
   width: 90%;
-  height: 50%;
   max-width: 600px;
   margin-bottom: 2.25rem;
   border-radius:10px;
 }
 
-.ytp-button{
-  display:none;
-}
 
 @media (min-width: 1000px) {
   .intro-video {
