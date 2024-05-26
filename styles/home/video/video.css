@@ -28,14 +28,7 @@ iframe {
   align-self: center;
   width: 100%;
   max-width: 600px;
-<<<<<<< HEAD
   margin-bottom: 2.25rem;
-=======
-    border-radius: 10px;
-    border-color: #08dffb;
-    filter: drop-shadow( 2px 2px 2px #2c2c2cef);
-
->>>>>>> 037f6e1aedc9b9f524f77f4ba58b71040dfe4081
 }
 
 @media (min-width: 1000px) {
@@ -50,14 +43,10 @@ iframe {
     padding-left: 18%;
     height: 100vh;
   }
-<<<<<<< HEAD
   .intro-video__video {
     position: absolute;
     left: 50%;
     width: 45%;
-=======
-  iframe {
->>>>>>> 037f6e1aedc9b9f524f77f4ba58b71040dfe4081
     max-width: 800px;
     width:530px;
     height:290px;
