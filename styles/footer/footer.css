@@ -12,6 +12,7 @@
 .footer__logo {
   margin-bottom: 3rem;
   width:18.75rem;
+  max-width: 150px;
 }
 
 .footer__brand-paragraph {
