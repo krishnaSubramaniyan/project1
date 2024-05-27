@@ -80,6 +80,7 @@
 
 .nav__burger--close {
   background-image: url("../../assets/header/x.svg");
+  filter: blur(5px);
   background-repeat: no-repeat;
   width: 20px;
   height: 15.56px;
